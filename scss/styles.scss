@@ -22,7 +22,7 @@ aside {
     border-right: 2px solid $borderRoze;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2.25rem;
     .menuSekcija {
         display: flex;
         justify-content: space-between;
@@ -40,23 +40,10 @@ aside {
             }
         }
     }
-    .asideSekcija {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        figure {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            border-bottom: 1px solid black;
-            padding-left: 0.3rem;
-            img {
-                padding: 0.2rem;
-            }
-            figcaption {
-                color: $mailColor;
-                font-size: 1.25rem;
-            }
+    .asideSekcija,.extraSekcija {
+        @include asideExtra;
+        h2 {
+            color: $mailColor;
         }
     }
 }

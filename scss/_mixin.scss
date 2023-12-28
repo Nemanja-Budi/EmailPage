@@ -5,3 +5,23 @@
         box-sizing: border-box;
     }
 }
+
+@mixin asideExtra {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    figure {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        border-bottom: 1px solid black;
+        padding-left: 0.3rem;
+        img {
+            padding: 0.2rem;
+        }
+        figcaption {
+            color: $mailColor;
+            font-size: 1.25rem;
+        }
+    }
+}
