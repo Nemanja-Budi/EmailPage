@@ -60,4 +60,15 @@ aside .asideSekcija h2, aside .extraSekcija h2 {
   color: #264e70;
 }
 
+@media only screen and (max-width: 1200px) {
+  aside {
+    width: 18rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  aside {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
