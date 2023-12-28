@@ -50,16 +50,75 @@ aside {
 
 
 main {
-
+    padding: 1.25rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    .pretraziSekcija {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        gap: 1rem;
+        .mdHidden {
+            display: none;
+        }
+        div {
+            grid-column: span 2;
+            input {
+                width: 50%;
+                padding: 0.5rem;
+                border-radius: 0.4rem;
+            }
+        }
+        .profileFigure {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.25rem;
+            text-align: end;
+            color: $mailColor;
+            font-size: 1.25rem;
+        }
+    }
+    .emailSekcija {
+        background-color: #320ee4;
+    }
 }
 
 @include tablet {
     aside {
         width: 18rem;
     }
+    .inputDiv{
+        input {
+            width: 100%!important;
+        }
+    }
 }
 @include mobilni {
+    body {
+        display: grid;
+        grid-template-columns: 1fr!important;
+    }
     aside {
         display: none;
+    }
+    main {
+        .pretraziSekcija {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 0rem;
+            .inputDiv {
+                grid-column: span 3;
+            } 
+            .mdHidden {
+                display: flex;
+            }
+            .profileFigure {
+                figcaption {
+                    display: none;
+                }
+            }
+        }
     }
 }
