@@ -81,13 +81,35 @@ main {
         }
     }
     .emailSekcija {
-        background-color: #320ee4;
+        border: 2px solid $mailColor;
+        border-radius: 0.4rem;
+        margin-bottom: 4rem;
+        padding: 0.5rem;
+        .toolBarDiv {
+            border-bottom: 1px solid $mailColor;
+            padding: 0rem;
+            display: flex;
+            gap: 1rem;
+            figure {
+                display: flex;
+                align-items: center;
+                padding: 0.3rem;
+                gap: 1rem;
+                figcaption {
+                    color: $mailColor;
+                    font-size: 1.2rem;
+                }
+            }
+        }
     }
 }
 
 @include tablet {
     aside {
         width: 18rem;
+    }
+    .extraSekcija {
+        display: none!important;
     }
     .inputDiv{
         input {
@@ -118,6 +140,12 @@ main {
                 figcaption {
                     display: none;
                 }
+            }
+        }
+        .toolBarDiv {
+            justify-content: space-evenly;
+            figcaption {
+                display: none!important;
             }
         }
     }

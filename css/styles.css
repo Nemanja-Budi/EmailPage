@@ -93,12 +93,34 @@ main .pretraziSekcija .profileFigure {
   font-size: 1.25rem;
 }
 main .emailSekcija {
-  background-color: #320ee4;
+  border: 2px solid #264e70;
+  border-radius: 0.4rem;
+  margin-bottom: 4rem;
+  padding: 0.5rem;
+}
+main .emailSekcija .toolBarDiv {
+  border-bottom: 1px solid #264e70;
+  padding: 0rem;
+  display: flex;
+  gap: 1rem;
+}
+main .emailSekcija .toolBarDiv figure {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  gap: 1rem;
+}
+main .emailSekcija .toolBarDiv figure figcaption {
+  color: #264e70;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 1200px) {
   aside {
     width: 18rem;
+  }
+  .extraSekcija {
+    display: none !important;
   }
   .inputDiv input {
     width: 100% !important;
@@ -125,6 +147,12 @@ main .emailSekcija {
   }
   main .pretraziSekcija .profileFigure figcaption {
     display: none;
+  }
+  main .toolBarDiv {
+    justify-content: space-evenly;
+  }
+  main .toolBarDiv figcaption {
+    display: none !important;
   }
 }
 
