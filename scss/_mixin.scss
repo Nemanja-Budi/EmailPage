@@ -33,6 +33,13 @@
     
 }
 
+@mixin srednji {
+    @media only screen and (max-width: 980px) {
+        @content;
+    }
+    
+}
+
 @mixin mobilni {
     @media only screen and (max-width: 720px) {
         @content;
